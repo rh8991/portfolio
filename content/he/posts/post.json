@@ -1,0 +1,53 @@
+[
+    {
+        "slug": "visual-microphone",
+        "title": "המיקרופון החזותי: שחזור קול מווידאו",
+        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
+        "excerpt": "שחזור אודיו מרעידות זעירות על פני שטח באמצעות וידאו בלבד. ניתוח תנועה מבוסס פאזה, טריקים של rolling shutter וסינון רעשים לקבלת דיבור ברור.",
+        "tags": [
+            "עיבוד אותות",
+            "ראייה ממוחשבת",
+            "אקוסטיקה"
+        ],
+        "minutes": 15,
+        "date": "2025-09-11"
+    },
+    {   
+        "slug": "fft-python-cpp",
+        "title": "מימוש FFT בפייתון ו־++C",
+        "image": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=1200&auto=format&fit=crop",
+        "excerpt": "בחירת חלונות, חפיפה וטיפים לאימות. מ־NumPy ל־Eigen עם הערות על ביצועים ובדיקות נכונות.",
+        "tags": [
+            "עיבוד אותות",
+            "פייתון",
+            "cpp"
+        ],
+        "minutes": 6,
+        "date": "2025-08-20"
+    },
+    {
+        "slug": "snr-good-signal",
+        "title": "יחס אות לרעש: מתי אות נחשב 'טוב'?",
+        "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop",
+        "excerpt": "הסבר אינטואיטיבי על dB, מקורות רעש והגדרות מדידה כדי שתוכלו להעריך איכות אות במהירות.",
+        "tags": [
+            "אותות",
+            "מדידה"
+        ],
+        "minutes": 4,
+        "date": "2025-08-05"
+    },
+    {
+        "slug": "esp32-ble-ekg",
+        "title": "סטרימינג EKG ב־ESP32 BLE",
+        "image": "https://images.unsplash.com/photo-1581091215360-9e8a9d5f2f89?q=80&w=1200&auto=format&fit=crop",
+        "excerpt": "סטרימינג EKG דרך BLE עם אסטרטגיות buffering, טיפול באובדן חבילות ו־GUI בפייתון להצגה.",
+        "tags": [
+            "אמבדד",
+            "ble",
+            "esp32"
+        ],
+        "minutes": 5,
+        "date": "2025-07-15"
+    }
+]

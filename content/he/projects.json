@@ -1,0 +1,40 @@
+[
+  {
+    "title": "SonicScope – מנתח אודיו בזמן אמת",
+    "slug": "sonicscope",
+    "tags": [
+      "עיבוד אותות",
+      "פייתון",
+      "plotly"
+    ],
+    "summary": "FFT חי, פילטרים, וקנה מידה לעוצמת אודיו.",
+    "image": "https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?q=80&w=1200&auto=format&fit=crop",
+    "links": {
+      "github": "https://github.com/rh8991/SonicScope-LITE"
+    }
+  },
+  {
+    "title": "ESP32‑S3 סטרימינג א.ק.ג.",
+    "slug": "esp32-ekg",
+    "tags": [
+      "אמבדד",
+      "esp32",
+      "ble"
+    ],
+    "summary": "AD8232 + BLE → GUI בפייתון לסינון וניתוח.",
+    "image": "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop",
+    "links": {}
+  },
+  {
+    "title": "מיקרופון חזותי – שחזור קול מווידאו",
+    "slug": "visual-mic",
+    "tags": [
+      "עיבוד אותות",
+      "opencv",
+      "מחקר"
+    ],
+    "summary": "שחזור אודיו מרעידות זעירות באמצעות וידאו.",
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
+    "links": {}
+  }
+]

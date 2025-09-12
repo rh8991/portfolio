@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Post – Ronel Herzass</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Icons -->
+  <link rel="icon
+    href=" data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128' %3E%3Ctext y='1em'
+    font-size='96' %3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Heebo:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+  <!-- Split CSS: shared + post page -->
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/post.css">
+
+  <!-- highlight.js and marked links -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+  <script src="/assets/js/post.js" defer></script>
+
+
+  <script>
+    // bootstrap dark mode to avoid flash
+    (function () {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+
+  <style>
+    /* Default: Inter for EN and general UI */
+    html:not([lang="he"]) body {
+      font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+        Roboto, "Noto Sans", Arial, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol", sans-serif;
+    }
+
+    /* Hebrew pages: Heebo first (great Hebrew support), Inter as fallback */
+    html[lang="he"] body {
+      font-family: "Heebo", "Inter", ui-sans-serif, system-ui, -apple-system,
+        "Segoe UI", Roboto, "Noto Sans Hebrew", Arial, sans-serif;
+    }
+
+    /* Nice typographic defaults */
+    body {
+      font-feature-settings: "kern", "liga", "clig", "calt";
+      font-kerning: normal;
+    }
+  </style>
+</head>
+
+<body class="antialiased">
+  <header class="header">
+    <div class="header-inner">
+      <a href="/" class="logo-link">
+        <span class="logo-icon material-symbols-outlined" aria-hidden="true">electric_bolt</span>
+        <span>Ronel Herzass</span>
+      </a>
+      <div class="header-controls">
+        <a href="/#blog" class="btn-outline text-sm" aria-label="Back to Blog">
+          <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+        </a>
+        <button id="langToggle" class="btn-outline" aria-label="Toggle language">
+          <span class="material-symbols-outlined" aria-hidden="true">language</span>
+        </button>
+        <button id="darkToggle" class="btn-outline" aria-label="Toggle dark mode">
+          <span id="darkToggleIcon" class="material-symbols-outlined" aria-hidden="true">dark_mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <div class="post-layout">
+      <div class="post-content">
+        <div id="progressbar"></div>
+        <section id="postHeader" class="mb-8"></section>
+        <article class="prose dark:prose-invert" id="post"></article>
+      </div>
+      <aside class="toc-sidebar">
+        <nav id="toc" class="toc">
+          <h4>Contents</h4>
+          <div id="tocItems"></div>
+        </nav>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>© <span id="year"></span> Ronel Herzass</p>
+      <div class="footer-links">
+        <a href="#" class="footer-link">Privacy</a>
+        <a href="#" class="footer-link">Imprint</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

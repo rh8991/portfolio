@@ -1,0 +1,41 @@
+[
+  {
+    "title": "SonicScope – Real‑Time Audio Analyzer",
+    "slug": "sonicscope",
+    "tags": [
+      "dsp",
+      "python",
+      "plotly"
+    ],
+    "summary": "Live FFT, filters, and amplitude scaling for audio.",
+    "image": "https://github.com/rh8991/signal-processing-roadmap/blob/master/SonicScope/assets/ANF_logo.png?raw=true",
+    "links": {
+      "github": "https://github.com/rh8991/signal-processing-roadmap/tree/master/SonicScope"
+    }
+  },
+  {
+    "title": " Signal Generator Simulation App",
+    "slug": "signal-generator",
+    "tags": [
+      "dsp",
+      "python",
+      "signal-generator"
+    ],
+    "summary": "Simulate a basic signal generator with Python.",
+    "image": "https://www.siglenteu.com/wp-content/uploads/2020/05/625-420.png",
+    "links": {
+      "github": "https://github.com/rh8991/signal-processing-roadmap/tree/master/signal-generator-app"}
+  },
+  {
+    "title": "Visual Microphone – Recover Sound from Video",
+    "slug": "visual-mic",
+    "tags": [
+      "dsp",
+      "computer-vision",
+      "research"
+    ],
+    "summary": "Audio reconstruction from tiny vibrations using video.",
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
+    "links": {}
+  }
+]
