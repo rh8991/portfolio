@@ -122,7 +122,7 @@
 
     try {
       // fetch the markdown itself
-      const res = await fetch(`/content/${lang}/posts/${slug}.md`, { cache: 'no-store' });
+      const res = await fetch(`content/${lang}/posts/${slug}.md`, { cache: 'no-store' });
       if (!res.ok) {
         document.getElementById('post').innerHTML =
           `<p class="text-red-600">Post not found (HTTP ${res.status}).<br>
