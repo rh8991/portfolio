@@ -54,7 +54,7 @@
     if (langSelect) langSelect.value = lang;
 
     // Fetch all UI text from index.json
-    const res = await fetch(`/content/${lang}/index.json`, { cache: 'no-store' });
+    const res = await fetch(`content/${lang}/index.json`, { cache: 'no-store' });
     const t = await res.json();
 
     // Set UI text
@@ -109,7 +109,7 @@
 
   async function loadProjects() {
     try {
-      const res = await fetch(`/content/${lang}/projects.json`, { cache: 'no-store' });
+      const res = await fetch(`content/${lang}/projects.json`, { cache: 'no-store' });
       const data = await res.json();
       const grid = document.getElementById('projectGrid');
       grid.innerHTML = data.map(p => `
@@ -131,12 +131,12 @@
 
   async function loadPosts() {
     try {
-      const res = await fetch(`/content/${lang}/posts/post.json`, { cache: 'no-store' });
+      const res = await fetch(`content/${lang}/posts/post.json`, { cache: 'no-store' });
       const posts = await res.json();
       const list = document.getElementById('postList');
       list.innerHTML = posts.map(p => `
         <article class="card group">
-          <a href="/post.html?lang=${lang}&slug=${p.slug}" class="card-link">
+          <a href="post.html?lang=${lang}&slug=${p.slug}" class="card-link">
             <img src="${p.image}" alt="${p.title}" loading="lazy" class="card-img"/>
             <div class="card-body">
               <h3 class="card-title">${p.title}</h3>

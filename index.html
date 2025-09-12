@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Icons -->
-  <link rel="icon"
+  <link rel="icon
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='%233b82f6' d='M22 44v-9H10.5q-.85 0-1.225-.725-.375-.725.075-1.425l13.7-21.7q.5-.8 1.525-.8.425 0 .825.175.4.175.675.525.275.35.275.825v9h11.5q.85 0 1.225.725.375.725-.075 1.425l-13.7 21.7q-.5.8-1.525.8-.425 0-.825-.175-.4-.175-.675-.525-.275-.35-.275-.825Z'/%3E%3C/svg%3E">
 
   <!-- Preconnect for fonts -->
@@ -21,6 +21,7 @@
   <!-- Split CSS: shared + homepage -->
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/home.css">
+  <script src="assets/js/render.js" defer></script>
   <style>
     html:not([lang="he"]) body {
       font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
@@ -43,7 +44,7 @@
 <body class="antialiased" data-lang="en">
   <header class="header">
     <div class="header-inner">
-      <a href="/" class="logo-link">
+      <a href="index.html" class="logo-link">
         <span class="logo-icon material-symbols-outlined" aria-hidden="true">electric_bolt</span>
         <span id="siteTitle">Ronel Herzass</span>
       </a>
@@ -52,9 +53,8 @@
         <a id="navBlog" href="#blog" class="nav-link">Blog</a>
         <a id="navAbout" href="#about" class="nav-link">About</a>
         <a id="navContact" href="#contact" class="nav-link">Contact</a>
-        <a href="/public/CV_Ronel_Herzass.pdf" class="btn" aria-label="CV" target="_blank">
+        <a href="public/CV_Ronel_Herzass.pdf" class="btn cv-btn" aria-label="CV" target="_blank">
           <span class="material-symbols-outlined" aria-hidden="true">article_person</span>
-          <span>CV</span>
         </a>
         <button id="langToggle" class="btn-outline" aria-label="Toggle language">
           <span class="material-symbols-outlined" aria-hidden="true">language</span>
@@ -183,8 +183,6 @@
       </div>
     </div>
   </footer>
-
-  <script src="assets/js/render.js" defer></script>
 </body>
 
 </html>
