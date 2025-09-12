@@ -49,19 +49,27 @@
         <span id="siteTitle">Ronel Herzass</span>
       </a>
       <nav class="header-controls">
-        <a id="navProjects" href="#projects" class="nav-link">Projects</a>
-        <a id="navBlog" href="#blog" class="nav-link">Blog</a>
-        <a id="navAbout" href="#about" class="nav-link">About</a>
-        <a id="navContact" href="#contact" class="nav-link">Contact</a>
-        <a href="public/CV_Ronel_Herzass.pdf" class="btn cv-btn" aria-label="CV" target="_blank">
-          <span class="material-symbols-outlined" aria-hidden="true">article_person</span>
-        </a>
-        <button id="langToggle" class="btn-outline" aria-label="Toggle language">
-          <span class="material-symbols-outlined" aria-hidden="true">language</span>
+        <!-- Hamburger button (always visible in media mode) -->
+        <button id="navHamburger" class="hamburger-btn" aria-label="Menu">
+          <span class="material-symbols-outlined" aria-hidden="true">menu</span>
         </button>
-        <button id="darkToggle" class="btn-outline" aria-label="Toggle dark mode">
-          <span id="darkToggleIcon" class="material-symbols-outlined" aria-hidden="true">dark_mode</span>
-        </button>
+
+        <!-- All header buttons/links inside nav-menu -->
+        <div id="navMenu" class="nav-menu">
+          <a id="navProjects" href="#projects" class="nav-link">Projects</a>
+          <a id="navBlog" href="#blog" class="nav-link">Blog</a>
+          <a id="navAbout" href="#about" class="nav-link">About</a>
+          <a id="navContact" href="#contact" class="nav-link">Contact</a>
+          <a href="public/CV_Ronel_Herzass.pdf" class="btn cv-btn" aria-label="CV" target="_blank">
+            <span class="material-symbols-outlined" aria-hidden="true">article_person</span>
+          </a>
+          <button id="langToggle" class="btn-outline" aria-label="Toggle language">
+            <span class="material-symbols-outlined" aria-hidden="true">language</span>
+          </button>
+          <button id="darkToggle" class="btn-outline" aria-label="Toggle dark mode">
+            <span id="darkToggleIcon" class="material-symbols-outlined" aria-hidden="true">dark_mode</span>
+          </button>
+        </div>
       </nav>
     </div>
   </header>

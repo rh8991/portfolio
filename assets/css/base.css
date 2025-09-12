@@ -52,7 +52,8 @@ body {
 }
 
 .header {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 50;
   border-bottom: 1px solid var(--border);
@@ -281,4 +282,58 @@ h1, h2, h3, section[id] {
   :root {
     --lang-icon-size: 1.3em;
   }
+}
+
+/* Hide hamburger by default, show on small screens */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: .5rem;
+}
+
+/* Hide nav-menu on small screens by default */
+.nav-menu {
+  display: flex;
+  gap: .7rem;
+  align-items: center;
+}
+
+@media (max-width:880px) {
+  .hamburger-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text);
+    border-radius: 1rem;
+    
+  }
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 2rem;
+    background: var(--bg-alt);
+    box-shadow: 0 4px 24px rgba(60,130,246,.07);
+    border-radius: 1rem;
+    flex-direction: column;
+    min-width: 180px;
+    z-index: 100;
+    padding: 1rem;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus, .hamburger-btn:hover,
+  .hamburger-btn:focus, .btn:hover, .btn-outline:hover {
+    background: var(--bg-alt);
+    outline: none;
+  }
+
+  .nav-menu.open {
+    display: flex;
+    animation: slide-down 0.3s ease-out forwards;
+  }
+  
 }

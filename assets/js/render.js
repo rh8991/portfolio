@@ -188,4 +188,9 @@
       </article>
     `;
   }
+
+  // Hamburger menu toggle
+  document.getElementById('navHamburger')?.addEventListener('click', () => {
+    document.getElementById('navMenu')?.classList.toggle('open');
+  });
 })();
