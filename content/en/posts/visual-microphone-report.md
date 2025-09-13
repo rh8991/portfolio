@@ -42,24 +42,6 @@ In their experiments, Davis et al. performed tests both indoors (with controlled
 
 The study tested recovery on the **TIMIT** speech corpus and live speech across several objects. Table 1 below compares the **visual microphone (VM)** against a **Laser Doppler Vibrometer (LDV)** for the same scene. The results show that, while the VM is not as accurate as the LDV, it can still recover intelligible speech and music from video alone.
 
-| Sequence                    | Method | SSNR  | LLR Mean | Intelligibility |
-|:---------------------------|:------:|:-----:|:--------:|:---------------:|
-| Female speaker — fadg0, sa1| VM     | 24.5  | 1.47     | 0.72            |
-|                            | LDV    | 28.5  | 1.81     | 0.74            |
-| Female speaker — fadg0, sa2| VM     | 28.7  | 1.37     | 0.65            |
-|                            | LDV    | 26.5  | 1.82     | 0.70            |
-| Male speaker — mccs0, sa1  | VM     | 20.4  | 1.31     | 0.59            |
-|                            | LDV    | 26.1  | 1.83     | 0.73            |
-| Male speaker — mccs0, sa2  | VM     | 23.2  | 1.55     | 0.67            |
-|                            | LDV    | 25.8  | 1.96     | 0.68            |
-| Male speaker — mabw0, sa1  | VM     | 23.3  | 1.68     | 0.77            |
-|                            | LDV    | 28.2  | 1.74     | 0.76            |
-| Male speaker — mabw0, sa2  | VM     | 25.5  | 1.81     | 0.72            |
-|                            | LDV    | 26.0  | 1.88     | 0.74            |
-
-**Table 1.** VM vs. LDV on speech recovery.  
-*SSNR = Segmental SNR; LLR = Log-Likelihood Ratio (smaller is better).*
-
 High frequencies generally exhibit **lower amplitude** (smaller displacements and material damping). Lighter, compliant objects yielded stronger high-frequency response than rigid, massive objects, consistent with simple mass-spring models. This was one of the most surprising findings for me as a student: the choice of object and its material properties can dramatically affect the quality of recovered sound.
 
 ## Reflections & Discussion

@@ -52,11 +52,19 @@ body {
 }
 
 .header {
-  position: fixed;
-  width: 100%;
+  position: sticky;
   top: 0;
   z-index: 50;
-  border-bottom: 1px solid var(--border);
+  transition: box-shadow 0.2s, background 0.2s;
+}
+
+.header.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 4px 16px rgba(60, 130, 246, .13);
+  background: var(--bg);
 }
 
 .header-inner,
@@ -104,7 +112,7 @@ body {
 
 .btn {
   background: var(--brand);
-  color: var(--text) ;
+  color: var(--text);
 }
 
 .btn:hover,
@@ -244,7 +252,9 @@ textarea:focus {
   outline: none;
 }
 
-.btn, .btn-outline,.nav-link {
+.btn,
+.btn-outline,
+.nav-link {
   text-decoration: none;
 
 }
@@ -256,9 +266,19 @@ section[id] {
   scroll-margin-top: 40px;
 }
 
+#home {
+  scroll-margin-top: 0;
+}
+
 /* Adjust 80px to match your header's height */
-#blog, #projects, #about, #contact,
-h1, h2, h3, section[id] {
+#blog,
+#projects,
+#about,
+#contact,
+h1,
+h2,
+h3,
+section[id] {
   scroll-margin-top: 40px;
 }
 
@@ -301,6 +321,7 @@ h1, h2, h3, section[id] {
   align-items: center;
 }
 
+
 @media (max-width:880px) {
   .hamburger-btn {
     display: inline-flex;
@@ -308,25 +329,29 @@ h1, h2, h3, section[id] {
     justify-content: center;
     color: var(--text);
     border-radius: 1rem;
-    
+
   }
+
   .nav-menu {
     display: none;
     position: absolute;
     top: 100%;
-    right: 2rem;
+    right: 1rem;
     background: var(--bg-alt);
-    box-shadow: 0 4px 24px rgba(60,130,246,.07);
+    box-shadow: 0 4px 24px rgba(60, 130, 246, .07);
     border-radius: 1rem;
     flex-direction: column;
-    min-width: 180px;
+    min-width: auto;
     z-index: 100;
     padding: 1rem;
   }
 
   .nav-link:hover,
-  .nav-link:focus, .hamburger-btn:hover,
-  .hamburger-btn:focus, .btn:hover, .btn-outline:hover {
+  .nav-link:focus,
+  .hamburger-btn:hover,
+  .hamburger-btn:focus,
+  .btn:hover,
+  .btn-outline:hover {
     background: var(--bg-alt);
     outline: none;
   }
@@ -335,5 +360,26 @@ h1, h2, h3, section[id] {
     display: flex;
     animation: slide-down 0.3s ease-out forwards;
   }
-  
+
+  .nav-menu.closed {
+    animation: slide-up 0.3s ease-in forwards;
+  }
+
+}
+
+/* Make all header icon buttons (including CV) the same size */
+ .header-controls .btn-outline, .cv-btn {
+  min-width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 1.3rem;
+}
+
+/* Ensure icon inside CV button is centered and sized */
+.cv-btn .material-symbols-outlined {
+  font-size: 1.7em;
+  margin: 0;
 }

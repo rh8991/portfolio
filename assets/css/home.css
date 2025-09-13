@@ -21,6 +21,7 @@
   margin-bottom: 2.5rem;
   margin-top: 1rem;
 }
+
 .max-container {
   max-width: 90rem;
   margin: 0 auto;
@@ -34,6 +35,7 @@
   grid-template-columns: 1fr;
   align-items: center;
 }
+
 @media (min-width:1024px) {
   .grid-2 {
     grid-template-columns: 1fr 1fr;
@@ -45,13 +47,13 @@
 .card-grid {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns by default (desktop) */
 }
-@media (min-width:640px) {
-  .card-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (min-width:1024px) {
-  .card-grid { grid-template-columns: repeat(3, 1fr); }
+
+@media (max-width:1024px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
 }
 
 /* Hero styles */
@@ -61,21 +63,27 @@
   letter-spacing: -.02em;
   margin-bottom: 1.2rem;
   color: var(--brand-dark);
-  text-shadow: 0 2px 8px rgba(60,130,246,.07);
+  text-shadow: 0 2px 8px rgba(60, 130, 246, .07);
 }
-.hero-title span { color: var(--brand); }
+
+.hero-title span {
+  color: var(--brand);
+}
+
 .hero-subtitle {
   color: var(--text-muted);
   font-size: var(--font-subtitle);
   margin-bottom: 2.2rem;
   width: fit-content;
 }
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 1.2rem;
   margin-top: 2rem;
 }
+
 
 /* Section header styles */
 .section-header {
@@ -103,13 +111,37 @@
 }
 
 /* Utility font classes (use semantic HTML if possible) */
-.text-2xl { font-size: 2rem; font-weight: 700; }
-.font-bold, h2, h3 { font-weight: 700; }
-.text-sm, .card-meta { font-size: var(--font-sm); }
-.mt-8 { margin-top: 2rem; }
-.mt-4 { margin-top: 1rem; }
-.space-y-4 > * + * { margin-top: 1.2rem; }
-.w-60 { width: 15rem; }
+.text-2xl {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.font-bold,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+.text-sm,
+.card-meta {
+  font-size: var(--font-sm);
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.space-y-4>*+* {
+  margin-top: 1.2rem;
+}
+
+.w-60 {
+  width: 15rem;
+}
 
 /* Card styles */
 .card-link {
@@ -119,17 +151,43 @@
   transition: box-shadow .2s;
   text-decoration: none;
 }
+
 .card-img {
   aspect-ratio: 16/9;
   width: 100%;
   object-fit: cover;
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
-.card-body { padding: 1.2rem; }
-.card-title { font-weight: 700; font-size: var(--font-card-title); margin-bottom: .5rem; color: var(--text); }
-.card-summary { font-size: var(--font-card-summary); color: var(--text-muted); margin-bottom: 1rem; }
-.card-tags { display: flex; flex-wrap: wrap; gap: .5rem; }
-.card-meta { font-size: var(--font-card-meta); color: var(--text-muted); margin-top: .5rem; }
+
+.card-body {
+  padding: 1.2rem;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: var(--font-card-title);
+  margin-bottom: .5rem;
+  color: var(--text);
+}
+
+.card-summary {
+  font-size: var(--font-card-summary);
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.card-meta {
+  font-size: var(--font-card-meta);
+  color: var(--text-muted);
+  margin-top: .5rem;
+}
+
 .tag-pill {
   background: var(--bg-alt);
   color: var(--brand-dark);
@@ -139,11 +197,88 @@
   border: 1px solid var(--border);
 }
 
+/* Make contact form inputs fill available width on WebKit browsers */
+#contact input,
+#contact textarea,
+#contact select {
+  width: -webkit-fill-available;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#contact .grid {
+  gap: 1.2rem;
+}
+
+#contact .grid > label,
+#contact .grid > input,
+#contact .grid > textarea {
+  margin-bottom: 0.3rem;
+}
+
+/* Add gap between contact form fields */
+#contact form > .grid {
+  margin-bottom: 1.2rem;
+}
+
 /* Responsive adjustments */
-@media (max-width:640px) {
-  .section { padding: 2rem 0; border-radius: var(--radius-md); }
-  .hero-title { font-size: var(--font-title-sm); }
-  .hero-subtitle { font-size: var(--font-subtitle-sm); width: fit-content; }
-  .btn, .btn-outline { padding: .75rem 1rem; font-size: 1rem; }
-  .card-link, .card-img { border-radius: var(--radius-md); }
+@media (max-width:880px) {
+  .section {
+    padding: 2rem 0;
+    border-radius: var(--radius-md);
+  }
+
+  .hero-title {
+    font-size: var(--font-title-sm);
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-subtitle-sm);
+    width: fit-content;
+  }
+
+  .btn,
+  .btn-outline {
+    padding: .75rem 1rem;
+    font-size: 1rem;
+  }
+
+  .card-link,
+  .card-img {
+    border-radius: var(--radius-md);
+  }
+
+  /* Desktop/tablet: grid layout */
+  .card-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width:640px) {
+    .card-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width:1024px) {
+    .card-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* Mobile: sliding horizontal grid */
+  @media (max-width:640px) {
+    .card-grid {
+      display: flex;
+      overflow-x: auto;
+      gap: 1.2rem;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 1rem;
+    }
+    .card-grid > * {
+      flex: 0 0 80vw; /* Each card takes 80% of viewport width */
+      scroll-snap-align: start;
+    }
+  }
 }
