@@ -11,43 +11,5 @@
         ],
         "minutes": 15,
         "date": "2025-09-11"
-    },
-    {   
-        "slug": "fft-python-cpp",
-        "title": "Implementing an FFT in Python and C++",
-        "image": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=1200&auto=format&fit=crop",
-        "excerpt": "Windowing choices, overlap, and validation tips. From NumPy to Eigen with timing notes and correctness checks.",
-        "tags": [
-            "dsp",
-            "python",
-            "cpp"
-        ],
-        "minutes": 6,
-        "date": "2025-08-20"
-    },
-    {
-        "slug": "snr-good-signal",
-        "title": "SNR: When is a Signal “Good”?",
-        "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop",
-        "excerpt": "Practical intuition for dB, noise sources, and measurement setups so you can judge signal quality quickly.",
-        "tags": [
-            "signals",
-            "measurement"
-        ],
-        "minutes": 4,
-        "date": "2025-08-05"
-    },
-    {
-        "slug": "esp32-ble-ekg",
-        "title": "ESP32 BLE Streaming for EKG",
-        "image": "https://sa1s3optim.patientpop.com/assets/images/provider/photos/2674545.jpg",
-        "excerpt": "Streaming EKG over BLE with buffering strategies, packet loss handling, and a Python plotting GUI.",
-        "tags": [
-            "embedded",
-            "ble",
-            "esp32"
-        ],
-        "minutes": 5,
-        "date": "2025-07-15"
     }
 ]

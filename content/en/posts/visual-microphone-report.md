@@ -65,4 +65,4 @@ Passive recovery of audio from **video-only** measurements is feasible across a 
 
 *This technical review was completed as part of an assignment in my Electrical Engineering studies. For more details, see the [original study](https://people.csail.mit.edu/mrub/VisualMic/) and [Abe Davis's YouTube presentation](https://www.youtube.com/watch?v=FKXOucXB4a8&ab_channel=AbeDavis%27sResearch).*
 
-If you spot any corrections or would like to share your thoughts, please feel free to reach out via [social media](https://www.linkedin.com/in/ronel-herzass) or [email](mailto:ronelhrzass@gmail.com).
+If you spot any corrections or would like to share your thoughts, please feel free to reach out via [social media](https://www.linkedin.com/in/ronel-herzass) or [email](mailto:ronelherzass@gmail.com).
