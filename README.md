@@ -6,7 +6,7 @@
 This is my personal portfolio site, built with plain **HTML, CSS, and JavaScript**.  
 It showcases my projects, blog posts, and CV.
 
-🔗 Live site: [https://rh8991.github.io/portfolio/](https://rh8991.github.io/portfolio/)
+🔗 Live site: [http://ronelherzass.com/](http://ronelherzass.com/)
 
 ---
 
