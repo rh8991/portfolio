@@ -10,6 +10,10 @@ minutes: 15
 
 Recently, I had the opportunity to dive into the fascinating world of visual acoustics as part of an assignment in my Electrical Engineering studies. The inspiration for this technical review came from the groundbreaking work presented in [The Visual Microphone: Passive Recovery of Sound from Video](https://people.csail.mit.edu/mrub/VisualMic/) by Abe Davis and colleagues, as well as the insightful [YouTube presentation](https://www.youtube.com/watch?v=FKXOucXB4a8&ab_channel=AbeDavis%27sResearch) that visually demonstrates the concept.
 
+<div class="video-embed">
+  <iframe width=100% height="450" src="https://www.youtube.com/embed/FKXOucXB4a8?si=2bPLdLxru0OEMqMb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 This post summarizes and reflects on the key ideas, methodology, and results of the study, aiming to make the technical details accessible to fellow students and enthusiasts. The review is based on the original paper, the video presentation, and my own understanding developed through the assignment.
 
 ## What is the Visual Microphone?
