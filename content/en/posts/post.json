@@ -2,7 +2,7 @@
     {
         "slug": "visual-microphone-report",
         "title": "The Visual Microphone: Passive Recovery of Sound from Video",
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/29/Spectrogram_of_violin.png",
         "excerpt": "Recover audio from tiny surface vibrations using only video. Phase-based motion, rolling shutter tricks, and denoising for intelligible speech.",
         "tags": [
             "dsp",

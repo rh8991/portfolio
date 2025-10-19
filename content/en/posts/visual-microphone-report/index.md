@@ -6,7 +6,10 @@ tags: ["signal-processing","acoustics","computer-vision","rolling shutter","phas
 minutes: 15
 ---
 
-Recently, I had the opportunity to dive into the fascinating world of visual acoustics as part of an assignment in my Electrical Engineering studies. The inspiration for this technical review came from the groundbreaking work presented in [The Visual Microphone: Passive Recovery of Sound from Video](https://people.csail.mit.edu/mrub/VisualMic/) by Abe Davis and colleagues, as well as the insightful [YouTube presentation](https://www.youtube.com/watch?v=FKXOucXB4a8&ab_channel=AbeDavis%27sResearch) that visually demonstrates the concept.
+> **Editor’s Note:**  
+> This post summarizes and reflects my technical review *“The Visual Microphone: Passive Recovery of Sound from Video.”* It’s a brief and accessible overview of the key ideas, insights, and lessons learned.
+
+Recently, I had the opportunity to dive into the fascinating world of visual acoustics as part of an assignment in my Electrical Engineering studies. The inspiration for this technical review came from the groundbreaking work presented in [The Visual Microphone: Passive Recovery of Sound from Video](https://people.csail.mit.edu/mrub/VisualMic/) by Abe Davis and colleagues, as well as the insightful YouTube presentation that visually demonstrates the concept.
 
 <div class="video-embed">
   <iframe width=100% height="450" src="https://www.youtube.com/embed/FKXOucXB4a8?si=2bPLdLxru0OEMqMb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -22,16 +25,16 @@ The core idea is that sound waves cause tiny vibrations on visible surfaces. By 
 
 ### General process
 
-1. **Multi-scale, multi-orientation decomposition.** Each frame is decomposed with a complex steerable pyramid [4], producing band-pass coefficients with local amplitude and phase.
+1. **Multi-scale, multi-orientation decomposition.** Each frame is decomposed with a complex steerable pyramid, producing band-pass coefficients with local amplitude and phase.
 2. **Phase-based motion estimation.** For each spatial location and band, phase changes relative to a reference frame approximate **sub-pixel motion** along the band orientation.
 3. **Aggregation.** Local motion signals are denoised and combined (e.g., SNR-weighted) to produce a single **global motion waveform** proportional to the sound pressure.
 4. **Post-processing.**
    - **Denoising:** high-pass (e.g., Butterworth) to suppress slow drift and illumination fluctuations.
-   - **Speech enhancement:** for intelligibility, a perceptually motivated enhancement stage [5] is applied.
+   - **Speech enhancement:** for intelligibility, a perceptually motivated enhancement stage is applied.
 
 In their experiments, Davis et al. performed tests both indoors (with controlled lighting) and outdoors (through a glass door). The loudspeaker was mechanically isolated from the target object to avoid direct coupling, and distances ranged **0.5–2 m**. I found it impressive how everyday objects—such as a bag of chips, aluminum foil, or plant leaves—could be used for sound recovery.
 
-**Rolling-shutter mode.** With a CMOS sensor, rows are exposed at slightly different times. Treating each row as a **time sample** enables recovery of higher-frequency content than the nominal frame rate would suggest, given knowledge of row time, readout order, and exposure [2], [3].
+**Rolling-shutter mode.** With a CMOS sensor, rows are exposed at slightly different times. Treating each row as a **time sample** enables recovery of higher-frequency content than the nominal frame rate would suggest, given knowledge of row time, readout order, and exposure.
 
 ### Required equipment
 
@@ -42,13 +45,13 @@ In their experiments, Davis et al. performed tests both indoors (with controlled
 
 ## Results: How Well Does It Work?
 
-The study tested recovery on the **TIMIT** speech corpus and live speech across several objects. Table 1 below compares the **visual microphone (VM)** against a **Laser Doppler Vibrometer (LDV)** for the same scene. The results show that, while the VM is not as accurate as the LDV, it can still recover intelligible speech and music from video alone.
+The study tested recovery on the **TIMIT** speech corpus and live speech across several objects. To evaluate the performance of the **visual microphone (VM)**, the researchers used a **Laser Doppler Vibrometer (LDV)** to measure the same scene. The results showed that, while the VM is not as accurate as the LDV, it can still recover intelligible speech and music from video alone.
 
 High frequencies generally exhibit **lower amplitude** (smaller displacements and material damping). Lighter, compliant objects yielded stronger high-frequency response than rigid, massive objects, consistent with simple mass-spring models. This was one of the most surprising findings for me as a student: the choice of object and its material properties can dramatically affect the quality of recovered sound.
 
 ## Reflections & Discussion
 
-The recovered signal is consistent with an **LTI approximation** for small motions: local image phase changes linearly with displacement along the filter orientation. Even when full intelligibility is not achieved, **paralinguistic cues** (speaker count, rough pitch range, activity) can be inferred—relevant to surveillance or scene understanding. As an engineering student, I found the ethical and privacy implications particularly thought-provoking: just because passive capture is possible does not mean it should be used without consent.
+The recovered signal is consistent with an **LTI approximation** for small motions: local image phase changes linearly with displacement along the filter orientation. Even when full intelligibility is not achieved, **paralinguistic cues** (speaker count, rough pitch range, activity) can be inferred—relevant to surveillance or scene understanding.
 
 **Limitations.**
 
@@ -65,6 +68,10 @@ Passive recovery of audio from **video-only** measurements is feasible across a 
 
 ---
 
-*This technical review was completed as part of an assignment in my Electrical Engineering studies. For more details, see the [original study](https://people.csail.mit.edu/mrub/VisualMic/) and [Abe Davis's YouTube presentation](https://www.youtube.com/watch?v=FKXOucXB4a8&ab_channel=AbeDavis%27sResearch).*
+📘 **Read More**  
+For the full technical review with detailed methodology, results, and references, visit:  
+[The Visual Microphone – Technical Report (PDF)](/content/en/posts/visual-microphone-report/The%20visual%20microphone%20-%20Technical%20Report%20Brief.pdf)
+
+---
 
 If you spot any corrections or would like to share your thoughts, please feel free to reach out via [social media](https://www.linkedin.com/in/ronel-herzass) or [email](mailto:ronelherzass@gmail.com).
