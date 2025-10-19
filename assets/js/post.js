@@ -144,7 +144,7 @@
 
     try {
       // fetch the markdown itself
-      const res = await fetch(`content/${lang}/posts/${slug}.md`, {
+      const res = await fetch(`content/${lang}/posts/${slug}/index.md`, {
         cache: "no-store",
       });
       if (!res.ok) {
@@ -178,8 +178,15 @@
       }
       postEl.innerHTML = marked.parse(body);
 
-      // Lazy-load images inside posts
-      postEl.querySelectorAll("img").forEach((img) => (img.loading = "lazy"));
+      // Fix relative image paths and lazy-load
+      postEl.querySelectorAll("img").forEach((img) => {
+        const src = img.getAttribute("src") || "";
+        // leave absolute, root-relative and data URIs untouched
+        if (!/^(https?:|data:|\/)/i.test(src)) {
+          img.src = `content/${lang}/posts/${slug}/${src}`;
+        }
+        img.loading = "lazy";
+      });
 
       // Syntax highlighting
       if (window.hljs) hljs.highlightAll();

@@ -18,12 +18,13 @@
   padding: 4rem 0;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
-  margin-bottom: 2.5rem;
-  margin-top: 1rem;
+  margin: 1rem auto 2.5rem; /* center horizontally */
+  max-width: 90rem;
+  /* removed align-self: center; (not needed) */
 }
 
 .max-container {
-  max-width: 90rem;
+  max-width: 70rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -81,7 +82,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1.2rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 
@@ -100,6 +101,7 @@
   font-weight: 800;
   color: var(--text);
   margin-bottom: .5rem;
+  margin-top: .5rem;
   letter-spacing: -.02em;
 }
 
@@ -221,6 +223,11 @@ h3 {
   margin-bottom: 1.2rem;
 }
 
+#textarea {
+  min-height: 120px;
+  resize: vertical;
+} 
+
 /* Responsive adjustments */
 @media (max-width:880px) {
   .section {
@@ -281,4 +288,15 @@ h3 {
       scroll-snap-align: start;
     }
   }
+}
+
+/* Utility class to center a section both vertically and horizontally in the viewport */
+.section--middle {
+  display: flex;
+  align-items: center;     /* vertical center */
+  justify-content: center; /* horizontal center of inner content */
+  min-height: calc(100vh - var(--header-height, 80px)); /* adjust header height if needed */
+  text-align: center;      /* center text/content inside */
+  padding: 2rem;
+  box-sizing: border-box;
 }

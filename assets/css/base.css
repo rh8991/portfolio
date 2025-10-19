@@ -159,6 +159,20 @@ textarea:focus {
   outline: none;
 }
 
+#contact input,
+#contact textarea,
+#contact select,
+.input {
+  border-radius: .75rem;
+  border: 1px solid var(--border);
+  background: var(--bg-alt);
+  color: var(--text);
+  padding: .75rem 1rem;
+  font-size: 1rem;
+  transition: .2s;
+  box-shadow: 0 1px 4px rgba(60, 130, 246, .04);
+}
+
 .footer {
   border-top: 1px solid var(--border);
   box-shadow: 0 -2px 8px rgba(60, 130, 246, .04);

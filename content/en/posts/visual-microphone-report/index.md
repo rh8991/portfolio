@@ -6,8 +6,6 @@ tags: ["signal-processing","acoustics","computer-vision","rolling shutter","phas
 minutes: 15
 ---
 
-## Introduction
-
 Recently, I had the opportunity to dive into the fascinating world of visual acoustics as part of an assignment in my Electrical Engineering studies. The inspiration for this technical review came from the groundbreaking work presented in [The Visual Microphone: Passive Recovery of Sound from Video](https://people.csail.mit.edu/mrub/VisualMic/) by Abe Davis and colleagues, as well as the insightful [YouTube presentation](https://www.youtube.com/watch?v=FKXOucXB4a8&ab_channel=AbeDavis%27sResearch) that visually demonstrates the concept.
 
 <div class="video-embed">

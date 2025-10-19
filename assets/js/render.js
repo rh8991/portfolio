@@ -275,4 +275,10 @@
       header.classList.remove("fixed");
     }
   });
+
+  document.getElementById('copyEmail')?.addEventListener('click', function() {
+    navigator.clipboard.writeText('ronelherzass@gmail.com');
+    this.title = "Copied!";
+    setTimeout(() => { this.title = "Copy email"; }, 1200);
+  });
 })();
