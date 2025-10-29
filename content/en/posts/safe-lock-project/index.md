@@ -1,9 +1,12 @@
 ---
-title: "Designing and Building a Digital Safe Lock – An Engineering Journey"
-subtitle: "A logic-based electronic security system built entirely without microcontrollers"
+title: "Designing a Digital Safe Lock"
+subtitle: "Applying digital design principles, noise filtering, and fault tolerance to build a reliable, keypad-controlled safe lock"
+excerpt: "Digital logic brought to life in a secure safe lock design"
+image: "content/en/posts/safe-lock-project/lock_sys.png"
+tags: ["digital-logic", "hardware", "electronics"]
 date: 2025-05-01
-tags: ["digital-logic", "hardware", "electronics", "engineering-project", "safe-lock"]
 minutes: 14
+lang: "en"
 ---
 
 
@@ -14,7 +17,7 @@ One of the most rewarding experiences during my Electrical and Electronics Engin
 ## Project Overview
 
 This pre-capstone project focused on designing and implementing a digital safe mechanism using **only discrete logic components**, without any microcontrollers or programmable devices.  
-The system’s goal: to verify a three-digit code, signal successful or failed attempts, automatically lock after a set duration, and enforce security rules such as a buzzer alarm after repeated failed entries.
+The system’s main goal was fourfold;  to verify a three-digit code signal successful or failed attempts, automatically lock after a set duration, and enforce security rules such as a buzzer alarm after repeated failed entries.
 
 To keep the design both simple and elegant, we worked under three major constraints:
 
@@ -22,7 +25,7 @@ To keep the design both simple and elegant, we worked under three major constrai
 - **Maximum of 15 components** across the entire system  
 - **Pure logic design** — using flip-flops, counters, timers, and gates only  
 
-This strict environment encouraged a deep understanding of how digital systems behave — from timing and synchronization to noise filtering and signal stability.
+This strict environment necessitated a deep understanding of how digital systems behave — from timing and synchronization to noise filtering and signal stability.
 
 ---
 
@@ -51,7 +54,7 @@ Noise from mechanical switches was handled with **RC filters** to stabilize puls
 
 When the sequence matched, a signal was sent to enable the opening subsystem. Incorrect sequences triggered the error counter.
 
-Additionally, keypad and other sensitive inputs were tied to ground with pull‑down resistors to prevent floating. We used 1 kΩ on the keypad lines, ~10 kΩ on the 4013 inputs for code verification, 200 kΩ and 600 kΩ on two different counter/clock nodes, and 10 kΩ on the up‑count counter inputs. Combined with RC debouncing, these values stopped spurious counts and false key presses while keeping standby current reasonable.
+Additionally, keypad and other sensitive inputs were tied to ground with pull‑down resistors to prevent floating. We used 1 kΩ on the keypad lines, ~10 kΩ on the 4013 inputs for code verification, 200 kΩ and 600 kΩ on two different counter/clock nodes, and 10 kΩ on the up‑count counter inputs. All the above, combined with RC debouncing, prevented false key presses while keeping standby current reasonable.
 
 For a quick primer on pull‑up and pull‑down resistors, see the [SparkFun tutorial](https://learn.sparkfun.com/tutorials/pull-up-resistors).
 
@@ -105,7 +108,7 @@ The PCB’s 3D and 2D renders helped verify spatial design and connector alignme
 ## Testing and Verification
 
 Testing focused on timing accuracy and fault tolerance.  
-To verify timing without lab access, we used an **Arduino as a measuring instrument** — recording how long the lock stayed open after a valid code.  
+To verify timing without lab access, we used an **Arduino as a measuring instrument**  to record how long the lock stayed open after a valid code was entered.  
 The results confirmed the **5-second open interval**, stable reset behavior, and clean debouncing response.
 
 ![Timing](timing.png)

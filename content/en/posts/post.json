@@ -1,15 +1,15 @@
 [
     {
         "slug": "visual-microphone-report",
-        "title": "The Visual Microphone: Passive Recovery of Sound from Video",
+        "title": "Exploring the Visual Microphone – Engineering Sound from Video",
         "image": "https://upload.wikimedia.org/wikipedia/commons/2/29/Spectrogram_of_violin.png",
-        "excerpt": "Recover audio from tiny surface vibrations using only video. Phase-based motion, rolling shutter tricks, and denoising for intelligible speech.",
+        "excerpt": "A technical review of video-only acoustic recovery using phase-based motion estimation and rolling-shutter sampling.",
         "tags": [
             "dsp",
             "computer-vision",
             "acoustics"
         ],
-        "minutes": 15,
+        "minutes": 10,
         "date": "2025-09-11"
     },
     {
@@ -21,7 +21,7 @@
             "analog",
             "hardware"
         ],
-        "minutes": 20,
+        "minutes": 5,
         "date": "2025-09-24"
     }
 ]

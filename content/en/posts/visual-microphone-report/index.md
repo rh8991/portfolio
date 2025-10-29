@@ -1,15 +1,18 @@
 ---
-title: "Turning Images Into Sound: A Review of the Visual Microphone"
-subtitle: "A technical review and reflection by Ronel Herzass"
-date: 2025-09-11
-tags: ["signal-processing","acoustics","computer-vision","rolling shutter","phase-based motion","study review"]
-minutes: 15
+title: "Exploring the Visual Microphone – Engineering Sound from Video"
+subtitle: "A technical review of video-only acoustic recovery using phase-based motion estimation and rolling-shutter sampling"
+excerpt: "Technical review: how tiny visual vibrations allow sound recovery from video."
+image: "https://upload.wikimedia.org/wikipedia/commons/2/29/Spectrogram_of_violin.png"
+tags: ["dsp","computer-vision","acoustics"]
+date: "2025-09-11"
+minutes: 10
+lang: "en"
 ---
 
 > **Editor’s Note:**  
 > This post summarizes and reflects my technical review *“The Visual Microphone: Passive Recovery of Sound from Video.”* It’s a brief and accessible overview of the key ideas, insights, and lessons learned.
 
-Recently, I had the opportunity to dive into the fascinating world of visual acoustics as part of an assignment in my Electrical Engineering studies. The inspiration for this technical review came from the groundbreaking work presented in [The Visual Microphone: Passive Recovery of Sound from Video](https://people.csail.mit.edu/mrub/VisualMic/) by Abe Davis and colleagues, as well as the insightful YouTube presentation that visually demonstrates the concept.
+I have recently had the opportunity to dive into the fascinating world of visual acoustics as part of an assignment in my Electrical Engineering studies. The inspiration for this technical review came from the groundbreaking work presented in [The Visual Microphone: Passive Recovery of Sound from Video](https://people.csail.mit.edu/mrub/VisualMic/) by Abe Davis and colleagues, as well as the insightful YouTube presentation that demonstrates the concept.
 
 <div class="video-embed">
   <iframe width=100% height="450" src="https://www.youtube.com/embed/FKXOucXB4a8?si=2bPLdLxru0OEMqMb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -19,7 +22,7 @@ This post summarizes and reflects on the key ideas, methodology, and results of 
 
 ## What is the Visual Microphone?
 
-The core idea is that sound waves cause tiny vibrations on visible surfaces. By analyzing high-speed video, it is possible to estimate these vibrations and **recover the underlying audio**. Everyday objects—like a bag of chips—can act as passive microphones, capturing sound in a way that is invisible to the naked eye but detectable through careful image analysis.
+The core idea is that sound waves cause tiny vibrations on visible surfaces. By analyzing high-speed video, it is possible to estimate these vibrations and **recover the underlying audio**. Everyday objects, such as a bag of chips, can act as passive microphones, capturing sound in a way that is invisible to the naked eye but detectable through careful image analysis.
 
 ## How Does It Work? (Methodology)
 
@@ -32,7 +35,7 @@ The core idea is that sound waves cause tiny vibrations on visible surfaces. By 
    - **Denoising:** high-pass (e.g., Butterworth) to suppress slow drift and illumination fluctuations.
    - **Speech enhancement:** for intelligibility, a perceptually motivated enhancement stage is applied.
 
-In their experiments, Davis et al. performed tests both indoors (with controlled lighting) and outdoors (through a glass door). The loudspeaker was mechanically isolated from the target object to avoid direct coupling, and distances ranged **0.5–2 m**. I found it impressive how everyday objects—such as a bag of chips, aluminum foil, or plant leaves—could be used for sound recovery.
+In their experiments, Davis et al. performed tests both indoors (with controlled lighting) and outdoors (through a glass door). The loudspeaker was mechanically isolated from the target object to avoid direct coupling, and distances ranged **0.5–2 m**. I found it impressive how everyday objects can be used for sound recovery.
 
 **Rolling-shutter mode.** With a CMOS sensor, rows are exposed at slightly different times. Treating each row as a **time sample** enables recovery of higher-frequency content than the nominal frame rate would suggest, given knowledge of row time, readout order, and exposure.
 
@@ -47,7 +50,7 @@ In their experiments, Davis et al. performed tests both indoors (with controlled
 
 The study tested recovery on the **TIMIT** speech corpus and live speech across several objects. To evaluate the performance of the **visual microphone (VM)**, the researchers used a **Laser Doppler Vibrometer (LDV)** to measure the same scene. The results showed that, while the VM is not as accurate as the LDV, it can still recover intelligible speech and music from video alone.
 
-High frequencies generally exhibit **lower amplitude** (smaller displacements and material damping). Lighter, compliant objects yielded stronger high-frequency response than rigid, massive objects, consistent with simple mass-spring models. This was one of the most surprising findings for me as a student: the choice of object and its material properties can dramatically affect the quality of recovered sound.
+High frequencies generally exhibit **lower amplitude** (smaller displacements and material damping). Lighter, compliant objects yielded stronger high-frequency response than rigid, massive objects, consistent with simple mass-spring models. This was one of the most surprising findings for me as a student: that the choice of object and its material properties can dramatically affect the quality of recovered sound.
 
 ## Reflections & Discussion
 
@@ -74,4 +77,4 @@ For the full technical review with detailed methodology, results, and references
 
 ---
 
-If you spot any corrections or would like to share your thoughts, please feel free to reach out via [social media](https://www.linkedin.com/in/ronel-herzass) or [email](mailto:ronelherzass@gmail.com).
+If you would like to comment or share your thoughts, please feel free to reach out via [social media](https://www.linkedin.com/in/ronel-herzass) or [email](mailto:ronelherzass@gmail.com).
