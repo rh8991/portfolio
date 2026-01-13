@@ -1,0 +1,25 @@
+{
+  "heroTitle": "Electrical Engineering · <span class='text-brand-600'>Signal Processing & Embedded</span>",
+  "heroSubtitle": "I design and build DSP tools, embedded systems, and control projects.",
+  "nav": {
+    "projects": "Projects",
+    "blog": "Blog",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "projectsTitle": "Projects",
+  "projectsSubtitle": "A curated selection of hands-on work.",
+  "blogTitle": "Blog",
+  "blogSubtitle": "Short, practical notes and explainers.",
+  "aboutTitle": "About",
+  "aboutText": [
+    "I’m a third-year Electrical Engineering student at Ariel University, specializing in signal processing, communications, and embedded systems. I focus on transforming theoretical concepts into practical tools — from audio analyzers and DSP visualizations to custom hardware and embedded solutions.",
+    "This site documents my engineering journey: projects, experiments, and ongoing work that reflect how I learn, build, and iterate. Some projects are polished, others are exploratory, but all are driven by curiosity, hands-on problem solving, and a desire to understand systems deeply."
+  ],
+  "contactTitle": "Contact",
+  "labelName": "Name",
+  "labelEmail": "Email",
+  "labelMessage": "Message",
+  "sendBtn": "Send",
+  "ctaProjects": "View Projects"
+}
