@@ -371,7 +371,7 @@ section[id] {
   }
 
   .nav-menu.open {
-    display: flex;
+    display: inline;
     animation: slide-down 0.3s ease-out forwards;
   }
 

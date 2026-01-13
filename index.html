@@ -1,193 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ronel Herzass – Portfolio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' %3E%3Cpath fill='%233b82f6' d='M22 44v-9H10.5q-.85 0-1.225-.725-.375-.725.075-1.425l13.7-21.7q.5-.8 1.525-.8.425 0 .825.175.4.175.675.525.275.35.275.825v9h11.5q.85 0 1.225.725.375.725-.075 1.425l-13.7 21.7q-.5.8-1.525.8-.425 0-.825-.175-.4-.175-.675-.525-.275-.35-.275-.825Z' /%3E%3C/svg%3E" />
+    
+    <!-- Preconnect for fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-21RT85LZ3V"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-21RT85LZ3V');
+    </script>
+    
+    <!-- Bootstrap dark mode -->
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+    
+    <style>
+      html:not([lang="he"]) body {
+        font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+          Roboto, "Noto Sans", Arial, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol", sans-serif;
+      }
 
-<head>
-  <title>Ronel Herzass – Portfolio</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+      html[lang="he"] body {
+        font-family: "Heebo", "Inter", ui-sans-serif, system-ui, -apple-system,
+          "Segoe UI", Roboto, "Noto Sans Hebrew", Arial, sans-serif;
+      }
 
-  <!-- Icons -->
-  <link rel="icon
-    href=" data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' %3E%3Cpath fill='%233b82f6'
-    d='M22 44v-9H10.5q-.85 0-1.225-.725-.375-.725.075-1.425l13.7-21.7q.5-.8 1.525-.8.425 0 .825.175.4.175.675.525.275.35.275.825v9h11.5q.85 0 1.225.725.375.725-.075 1.425l-13.7 21.7q-.5.8-1.525.8-.425 0-.825-.175-.4-.175-.675-.525-.275-.35-.275-.825Z'
-    /%3E%3C/svg%3E">
-
-  <!-- Preconnect for fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Heebo:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-
-  <!-- Split CSS: shared + homepage -->
-  <link rel="stylesheet" href="assets/css/base.css">
-  <link rel="stylesheet" href="assets/css/home.css">
-  <script src="assets/js/render.js" defer></script>
-  <style>
-    html:not([lang="he"]) body {
-      font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
-        Roboto, "Noto Sans", Arial, "Apple Color Emoji", "Segoe UI Emoji",
-        "Segoe UI Symbol", sans-serif;
-    }
-
-    html[lang="he"] body {
-      font-family: "Heebo", "Inter", ui-sans-serif, system-ui, -apple-system,
-        "Segoe UI", Roboto, "Noto Sans Hebrew", Arial, sans-serif;
-    }
-
-    body {
-      font-feature-settings: "kern", "liga", "clig", "calt";
-      font-kerning: normal;
-    }
-  </style>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-21RT85LZ3V"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-21RT85LZ3V');
-  </script>
-</head>
-
-<body class="antialiased" data-lang="en">
-  <header class="header">
-    <div class="header-inner">
-      <a href="#" class="logo-link">
-        <span class="logo-icon material-symbols-outlined" aria-hidden="true">electric_bolt</span>
-        <span id="siteTitle">Ronel Herzass</span>
-      </a>
-      <nav class="header-controls">
-        <!-- Hamburger button (always visible in media mode) -->
-        <button id="navHamburger" class="hamburger-btn" aria-label="Menu">
-          <span class="material-symbols-outlined" aria-hidden="true">menu</span>
-        </button>
-
-        <!-- All header buttons/links inside nav-menu -->
-        <div id="navMenu" class="nav-menu">
-          <a id="navProjects" href="#projects" class="nav-link">Projects</a>
-          <a id="navBlog" href="#blog" class="nav-link">Blog</a>
-          <a id="navAbout" href="#about" class="nav-link">About</a>
-          <a id="navContact" href="#contact" class="nav-link">Contact</a>
-          <a href="CV_Ronel_Herzass.pdf" class="btn cv-btn" aria-label="CV" target="_blank">CV</a>
-          <button id="langToggle" class="btn-outline" aria-label="Toggle language">
-            <span class="material-symbols-outlined" aria-hidden="true">language</span>
-          </button>
-          <button id="darkToggle" class="btn-outline" aria-label="Toggle dark mode">
-            <span id="darkToggleIcon" class="material-symbols-outlined" aria-hidden="true">dark_mode</span>
-          </button>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <main id="home">
-    <section class="section">
-      <div class="max-container grid-2">
-        <div>
-          <h1 id="heroTitle" class="hero-title">
-            Electrical Engineering · <span>Signal Processing & Embedded</span>
-          </h1>
-          <p id="heroSubtitle" class="hero-subtitle">
-            I design and build DSP tools, embedded systems, and control projects.
-          </p>
-          <div class="hero-actions">
-            <a href="#projects" id="ctaProjects" class="btn">View Projects</a>
-            <a href="#blog" class="btn-outline" aria-label="Blog">Blog</a>
-            <a href="https://github.com/rh8991" class="btn-outline" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://www.linkedin.com/in/ronel-herzass" class="btn-outline" target="_blank"
-              rel="noopener">LinkedIn</a>
-          </div>
-        </div>
-        <div>
-          <div class="card">
-            <img alt="Electronics lab desk with instruments"
-              src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1200&auto=format&fit=crop"
-              loading="lazy" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section border-t">
-      <div class="max-container">
-        <div class="section-header">
-          <div>
-            <h2 id="projectsTitle" class="section-header-title">Projects</h2>
-            <p id="projectsSubtitle" class="section-header-subtitle">
-              Showcasing my work in various domains.
-            </p>
-          </div>
-          <div class="hero-actions">
-            <button data-filter="all" class="btn-outline text-sm">All</button>
-            <button data-filter="dsp" class="btn-outline text-sm">DSP</button>
-            <button data-filter="embedded" class="btn-outline text-sm">Embedded</button>
-            <button data-filter="python" class="btn-outline text-sm">Python</button>
-            <button data-filter="c++" class="btn-outline text-sm">C++</button>
-            <button data-filter="hardware" class="btn-outline text-sm">Hardware</button>
-            <button data-filter="digital-design" class="btn-outline text-sm">Digital Design</button>
-          </div>
-        </div>
-        <div id="projectGrid" class="card-grid mt-8"></div>
-        <div class="mt-8 text-sm section-header-subtitle">
-          More on <a class="footer-link" href="https://github.com/rh8991" target="_blank" rel="noopener">GitHub</a>.
-        </div>
-      </div>
-    </section>
-
-    <section id="blog" class="section border-t">
-      <div class="max-container">
-        <div class="section-header">
-          <div>
-            <h2 id="blogTitle" class="section-header-title">Blog</h2>
-            <p id="blogSubtitle" class="section-header-subtitle">
-              Thoughts on signal processing, embedded systems, and more.
-            </p>
-          </div>
-          <input id="blogSearch" type="search" placeholder="Search posts…" class="input w-60 text-sm"
-            aria-label="Search posts" />
-        </div>
-        <div id="postList" class="card-grid mt-8"></div>
-      </div>
-    </section>
-
-    <section id="about" class="section border-t">
-      <div class="max-container">
-        <div class="section-header">
-          <h2 id="aboutTitle" class="section-header-title">About</h2>
-        </div>
-        <div id="aboutText" class="mt-4 space-y-4"></div>
-      </div>
-    </section>
-
-    <section id="contact" class="section border-t">
-      <div class="max-container text-center "
-        style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-        <h2 class="section-header-title mb-4">Connect With Me</h2>
-        <p class="mb-6 text-gray-600 padding-x-4">
-          I'm always open to new projects, collaborations, and ideas.
-        </p>
-        <div class="hero-actions" style="display: flex; gap: 1rem; justify-content: center;">
-          <a href="mailto:ronelherzass@gmail.com" class="btn">Email</a>
-          <a href="https://www.linkedin.com/in/ronel-herzass" class="btn" target="_blank">LinkedIn</a>
-          <a href="https://github.com/rh8991" class="btn" target="_blank">GitHub</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-      <p>© <span id="year"></span> Ronel Herzass</p>
-      <div class="footer-links">
-        <a href="privacy.html" class="footer-link">Privacy</a>
-        <a href="imprint.html" class="footer-link">Imprint</a>
-      </div>
-    </div>
-  </footer>
-</body>
-
+      body {
+        font-feature-settings: "kern", "liga", "clig", "calt";
+        font-kerning: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

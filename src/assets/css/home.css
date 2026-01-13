@@ -197,6 +197,7 @@ h3 {
   padding: .3em .8em;
   font-size: .9em;
   border: 1px solid var(--border);
+  margin-inline: 0.2rem;
 }
 
 /* Make contact form inputs fill available width on WebKit browsers */
