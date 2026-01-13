@@ -28,8 +28,9 @@ jobs:
       - run: npm ci
       - run: npm run build
 
-      # optional but helpful sometimes
-      - run: touch dist/.nojekyll
+      # Ensure .nojekyll exists (prevents Jekyll processing)
+      - run: echo "" > dist/.nojekyll
+        shell: bash
 
       - uses: actions/upload-pages-artifact@v3
         with:
