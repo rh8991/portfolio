@@ -74,7 +74,7 @@ export default function Header() {
             </a>
           </div>
           <a
-            href="../public/CV_Ronel_Herzass.pdf"
+            href="/CV_Ronel_Herzass.pdf"
             className="btn cv-btn"
             aria-label="CV"
             target="_blank"

@@ -288,7 +288,7 @@ export default function Home() {
 
                 return (
                   <article key={post.slug} className="card group" data-tags={(post.tags || []).join(' ')}>
-                    <a className="card-link" href={`/post?slug=${encodeURIComponent(post.slug)}`}>
+                    <a className="card-link" href={`#/post?slug=${encodeURIComponent(post.slug)}`}>
                       {post.image && (
                         <img className="card-img" src={post.image} alt={post.title || ''} loading="lazy" />
                       )}
