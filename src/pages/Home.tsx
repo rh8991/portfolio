@@ -364,7 +364,7 @@ export default function Home() {
               I'm always open to new projects, collaborations, and ideas.
             </p>
             <div className="hero-actions" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-              <a href="mailto:ronelherzass@gmail.com" className="btn">
+              <a href="mailto:ronelhrzas98@gmail.com" className="btn">
                 Email
               </a>
               <a href="https://www.linkedin.com/in/ronel-herzass" className="btn" target="_blank" rel="noopener">
