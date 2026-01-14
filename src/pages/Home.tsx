@@ -175,8 +175,26 @@ export default function Home() {
               <h1 className="hero-title" dangerouslySetInnerHTML={{ __html: content.heroTitle }} />
               <p className="hero-subtitle">{content.heroSubtitle}</p>
               <div className="hero-actions">
-                <a href="#projects" className="btn">{content.ctaProjects}</a>
-                <a href="#blog" className="btn-outline">Blog</a>
+                <a 
+                  href="#projects" 
+                  className="btn"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  {content.ctaProjects}
+                </a>
+                <a 
+                  href="#blog" 
+                  className="btn-outline"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('blog')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  Blog
+                </a>
                 <a href="https://github.com/rh8991" className="btn-outline" target="_blank" rel="noopener">
                   GitHub
                 </a>

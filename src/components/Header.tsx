@@ -26,7 +26,8 @@ export default function Header() {
     closeMenu();
 
     // If on homepage, scroll to section
-    if (location.pathname === '/') {
+    const isHomePage = location.pathname === '/' || location.pathname === '';
+    if (isHomePage) {
       const element = document.getElementById(sectionId);
       element?.scrollIntoView({ behavior: 'smooth' });
     } else {
