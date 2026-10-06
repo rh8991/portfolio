@@ -7,7 +7,7 @@ export default function Imprint() {
   return (
     <>
       <Header />
-      <main>
+      <main id="main" tabIndex={-1}>
         <section className="max-container text-center" style={{ padding: '60px 0' }}>
           <h2 className="section-header-title mb-4">Imprint</h2>
           <p>This website is operated by:</p>
@@ -17,7 +17,7 @@ export default function Imprint() {
           <p>
             Contact:
             <br />
-            <a href="mailto:ronelherzass@gmail.com">ronelherzass@gmail.com</a>
+            <a href="mailto:ronelhrzas98@gmail.com">ronelhrzas98@gmail.com</a>
             <br />
             <a href="https://www.linkedin.com/in/ronel-herzass" target="_blank" rel="noopener">
               LinkedIn Profile

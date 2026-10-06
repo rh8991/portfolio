@@ -301,3 +301,172 @@ h3 {
   padding: 2rem;
   box-sizing: border-box;
 }
+/* ===== Hero ===== */
+.hero-eyebrow {
+  color: var(--brand-dark);
+  font-weight: 600;
+  font-size: var(--font-sm);
+  letter-spacing: .02em;
+  margin-bottom: .75rem;
+}
+
+.dark .hero-eyebrow,
+.dark .hero-title {
+  color: var(--accent);
+}
+
+.hero-subtitle {
+  line-height: 1.6;
+  max-width: 38rem;
+}
+
+.hero-art-card {
+  padding: 1rem;
+}
+
+.hero-art-card:hover {
+  transform: none;
+}
+
+.hero-art {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero-art-grid {
+  stroke: var(--border);
+  stroke-width: 1;
+}
+
+.hero-art-axis {
+  stroke: var(--text-muted);
+  stroke-width: 1.5;
+}
+
+.hero-art-phase {
+  fill: none;
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.phase-a { stroke: #2563eb; }
+.phase-b { stroke: #f59e0b; }
+.phase-c { stroke: #10b981; }
+
+/* ===== Lists used as grids ===== */
+ul.card-grid,
+ul.card-tags,
+ol.timeline {
+  list-style: none;
+  padding: 0;
+  margin-block: 0;
+}
+
+/* ===== Focus areas ===== */
+.focus-card {
+  padding: 1.5rem;
+}
+
+.focus-card:hover {
+  transform: none;
+}
+
+.focus-card .focus-icon {
+  font-size: 2.4rem;
+  color: var(--brand-dark);
+  margin-bottom: .5rem;
+}
+
+.dark .focus-card .focus-icon {
+  color: var(--accent);
+}
+
+/* ===== Experience timeline ===== */
+.timeline {
+  border-inline-start: 2px solid var(--border);
+  padding-inline-start: 1.5rem !important;
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: calc(-1.5rem - 7px);
+  top: .35rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--brand);
+}
+
+.timeline-item .card-title {
+  margin-bottom: .2rem;
+}
+
+.timeline-item .card-meta {
+  margin-top: 0;
+  margin-bottom: .4rem;
+}
+
+.timeline-org {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ===== About / contact ===== */
+#about p {
+  line-height: 1.7;
+  max-width: 48rem;
+}
+
+.learning-list {
+  margin-top: .75rem;
+}
+
+.contact-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-text {
+  max-width: 40rem;
+  line-height: 1.6;
+}
+
+.contact-actions {
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+/* Comfortable tap targets on touch screens */
+@media (max-width:640px) {
+  .card-grid.focus-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .w-60 {
+    width: 100%;
+  }
+}
+
+/* Dark-mode contrast fixes */
+.card-link {
+  color: var(--text);
+}
+
+.dark .tag-pill {
+  color: var(--accent);
+}
+
+.dark .btn-outline.active-filter {
+  color: #fff;
+}

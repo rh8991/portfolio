@@ -1,25 +1,82 @@
 {
-  "heroTitle": "Electrical Engineering · <span class='text-brand-600'>Signal Processing & Embedded</span>",
-  "heroSubtitle": "I design and build DSP tools, embedded systems, and control projects.",
+  "heroEyebrow": "Electrical Engineering Student · HIT – Holon Institute of Technology",
+  "heroTitle": "Power Systems & <span class='text-brand-600'>Renewable Energy</span>",
+  "heroSubtitle": "I'm an electrical engineering student focused on power systems and renewable energy, with a strong passion for signal and audio processing. I learn by building: research-lab hardware, simulation code, and DSP tools that turn theory into something you can measure.",
   "nav": {
     "projects": "Projects",
     "blog": "Blog",
     "about": "About",
     "contact": "Contact"
   },
+  "focusTitle": "What I Focus On",
+  "focusSubtitle": "My core field, and the passion I keep building in.",
+  "focus": [
+    {
+      "icon": "electrical_services",
+      "title": "Power Systems",
+      "text": "Power-system analysis, power electronics, and electrical machines. I'm interested in how modern grids stay stable and efficient as they change."
+    },
+    {
+      "icon": "solar_power",
+      "title": "Renewable Energy",
+      "text": "Solar, wind, and energy storage. Hands-on battery SOC/SOH research taught me how much depends on careful measurement and control."
+    },
+    {
+      "icon": "graphic_eq",
+      "title": "Signal & Audio Processing",
+      "text": "My long-time passion: FFT analysis, filtering, and real-time audio tools. These skills carry straight over to power-quality and grid monitoring."
+    }
+  ],
+  "experienceTitle": "Experience",
+  "experienceSubtitle": "Research and hands-on roles alongside my studies.",
+  "experience": [
+    {
+      "role": "Research Assistant",
+      "org": "Motor Efficiency Research Lab",
+      "text": "Designed a custom PCB and Arduino firmware for an automated battery-switching system used in SOC/SOH research. Extended MATLAB scripts for motor parameter characterization."
+    },
+    {
+      "role": "Research Assistant",
+      "org": "Schlesinger Accelerators Center",
+      "text": "Ported and optimized Free Electron Laser beam-simulation code from Python to C++ for much faster runtimes, and helped with electron accelerator maintenance."
+    },
+    {
+      "role": "Science Instructor",
+      "org": "Technoda Medicine and Science Museum",
+      "period": "2023 – Present",
+      "text": "Design hands-on STEM experiments and mentor an FLL robotics team. Explaining engineering clearly is a skill I use every day."
+    },
+    {
+      "role": "Technical Branch Spokesperson",
+      "org": "Israeli Air Force",
+      "period": "2017 – 2020",
+      "text": "Coordinated media operations and multi-level communications where accuracy mattered."
+    }
+  ],
   "projectsTitle": "Projects",
   "projectsSubtitle": "A curated selection of hands-on work.",
+  "filterLabel": "Filter projects by tag",
+  "filterAll": "All",
+  "moreOnGithub": "More on",
   "blogTitle": "Blog",
   "blogSubtitle": "Short, practical notes and explainers.",
+  "searchPlaceholder": "Search posts…",
+  "noPosts": "No posts match your search.",
   "aboutTitle": "About",
   "aboutText": [
-    "I’m a third-year Electrical Engineering student at Ariel University, specializing in signal processing, communications, and embedded systems. I focus on transforming theoretical concepts into practical tools — from audio analyzers and DSP visualizations to custom hardware and embedded solutions.",
-    "This site documents my engineering journey: projects, experiments, and ongoing work that reflect how I learn, build, and iterate. Some projects are polished, others are exploratory, but all are driven by curiosity, hands-on problem solving, and a desire to understand systems deeply."
+    "I'm an Electrical Engineering student at HIT – Holon Institute of Technology, specializing in power systems and renewable energy. I'm drawn to the engineering behind the energy transition: generation, conversion, storage, and the control that keeps it all reliable.",
+    "Signal and audio processing is where my engineering curiosity started, and it is still a passion. I've built real-time audio analyzers and DSP tools, and I bring that measurement-and-analysis mindset to power systems work.",
+    "I'm still a student and I treat that as an advantage. I learn fast, ask good questions, and document what I build. This site tracks that journey: some projects are polished, others are exploratory, and all of them are hands-on."
   ],
-  "contactTitle": "Contact",
+  "currentlyLearningTitle": "Currently learning",
+  "currentlyLearning": ["Power system analysis", "Power electronics", "Renewable integration", "Energy storage", "MATLAB / Simulink"],
+  "contactTitle": "Connect With Me",
+  "contactText": "I'm looking for student positions, internships, and projects in power systems and renewable energy. I'm also always happy to talk signals and audio.",
   "labelName": "Name",
   "labelEmail": "Email",
   "labelMessage": "Message",
   "sendBtn": "Send",
-  "ctaProjects": "View Projects"
+  "ctaProjects": "View Projects",
+  "ctaCv": "Download CV",
+  "newTab": "(opens in a new tab)"
 }

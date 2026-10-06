@@ -200,7 +200,7 @@ export default function Post() {
     return (
       <>
         <Header />
-        <main className="max-w-3xl mx-auto px-4 py-8">
+        <main id="main" tabIndex={-1} className="max-w-3xl mx-auto px-4 py-8">
           <p>Loading...</p>
         </main>
         <Footer />
@@ -212,7 +212,7 @@ export default function Post() {
     return (
       <>
         <Header />
-        <main className="main-container mx-auto px-4 py-8 ">
+        <main id="main" tabIndex={-1} className="main-container mx-auto px-4 py-8 ">
           <p className="text-red-600">{error}</p>
         </main>
         <Footer />
@@ -224,7 +224,7 @@ export default function Post() {
     <>
       <div id="progressbar" ref={progressBarRef} className="progress-bar"></div>
       <Header />
-      <main className="post-layout mx-auto px-4 py-8 max-w-4xl">
+      <main id="main" tabIndex={-1} className="post-layout mx-auto px-4 py-8 max-w-4xl">
         <div id="postHeader" className="mb-8">
           <h1 className="post-title">{meta.title || 'Untitled'}</h1>
           {meta.subtitle && <p className="post-subtitle">{meta.subtitle}</p>}

@@ -1,24 +1,40 @@
-
-{/*todo: deside if should add language toggle - need content in hebrew*/}
-
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-{/*import { useLanguage } from '../context/LanguageContext';*/}
 import { useTheme } from '../context/ThemeContext';
 
+const NAV_ITEMS = [
+  { id: 'focus', label: 'Focus' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'blog', label: 'Blog' },
+  { id: 'about', label: 'About' },
+  { id: 'contact', label: 'Contact' },
+];
+
 export default function Header() {
-  {/*const { language, setLanguage } = useLanguage();*/}
   const { isDark, toggleTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
-  {/*const toggleLanguage = () => {
-    setLanguage(language === 'en' ? 'he' : 'en');
-  };*/}
-
   const closeMenu = () => {
     setIsMenuOpen(false);
+  };
+
+  // Close the mobile menu with Escape
+  useEffect(() => {
+    if (!isMenuOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsMenuOpen(false);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [isMenuOpen]);
+
+  const focusSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    element?.scrollIntoView({ behavior: 'smooth' });
+    element?.focus({ preventScroll: true });
   };
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
@@ -28,68 +44,74 @@ export default function Header() {
     // If on homepage, scroll to section
     const isHomePage = location.pathname === '/' || location.pathname === '';
     if (isHomePage) {
-      const element = document.getElementById(sectionId);
-      element?.scrollIntoView({ behavior: 'smooth' });
+      focusSection(sectionId);
     } else {
       // If on other page, navigate to home then scroll
       navigate('/');
-      setTimeout(() => {
-        const element = document.getElementById(sectionId);
-        element?.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
+      setTimeout(() => focusSection(sectionId), 100);
     }
+  };
+
+  const skipToMain = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const main = document.querySelector<HTMLElement>('main');
+    main?.focus();
+    main?.scrollIntoView();
   };
 
   return (
     <header className="header">
+      <a href="#main" className="skip-link" onClick={skipToMain}>
+        Skip to main content
+      </a>
       <div className="header-inner">
-        <a href="/" className="logo-link">
+        <a href="#/" className="logo-link" aria-label="Ronel Herzass – home">
           <span className="logo-icon material-symbols-outlined" aria-hidden="true">
             electric_bolt
           </span>
           <span>Ronel Herzass</span>
         </a>
-        <nav className="header-controls">
+        <nav className="header-controls" aria-label="Main">
           <button
+            type="button"
             className="hamburger-btn"
-            aria-label="Menu"
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isMenuOpen}
+            aria-controls="nav-menu"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <span className="material-symbols-outlined" aria-hidden="true">
-              menu
+              {isMenuOpen ? 'close' : 'menu'}
             </span>
           </button>
 
-          <div className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
-            <a href="#projects" className="nav-link" onClick={(e) => handleNavClick(e, 'projects')}>
-              Projects
-            </a>
-            <a href="#blog" className="nav-link" onClick={(e) => handleNavClick(e, 'blog')}>
-              Blog
-            </a>
-            <a href="#about" className="nav-link" onClick={(e) => handleNavClick(e, 'about')}>
-              About
-            </a>
-            <a href="#contact" className="nav-link" onClick={(e) => handleNavClick(e, 'contact')}>
-              Contact
-            </a>
+          <div id="nav-menu" className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
+            {NAV_ITEMS.map((item) => (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                className="nav-link"
+                onClick={(e) => handleNavClick(e, item.id)}
+              >
+                {item.label}
+              </a>
+            ))}
           </div>
           <a
             href="/CV_Ronel_Herzass.pdf"
             className="btn cv-btn"
-            aria-label="CV"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             onClick={closeMenu}
           >
-            CV
+            CV<span className="sr-only"> (PDF, opens in a new tab)</span>
           </a>
-          {/* <button className="btn-outline" aria-label="Toggle language" onClick={toggleLanguage}>
-            <span className="material-symbols-outlined" aria-hidden="true">
-              language
-            </span>
-          </button> */}
-          <button className="btn-outline" aria-label="Toggle dark mode" onClick={toggleTheme}>
+          <button
+            type="button"
+            className="btn-outline"
+            aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+            onClick={toggleTheme}
+          >
             <span className="material-symbols-outlined" aria-hidden="true">
               {isDark ? 'light_mode' : 'dark_mode'}
             </span>
