@@ -27,32 +27,6 @@
       "text": "My long-time passion: FFT analysis, filtering, and real-time audio tools. These skills carry straight over to power-quality and grid monitoring."
     }
   ],
-  "experienceTitle": "Experience",
-  "experienceSubtitle": "Research and hands-on roles alongside my studies.",
-  "experience": [
-    {
-      "role": "Research Assistant",
-      "org": "Motor Efficiency Research Lab",
-      "text": "Designed a custom PCB and Arduino firmware for an automated battery-switching system used in SOC/SOH research. Extended MATLAB scripts for motor parameter characterization."
-    },
-    {
-      "role": "Research Assistant",
-      "org": "Schlesinger Accelerators Center",
-      "text": "Ported and optimized Free Electron Laser beam-simulation code from Python to C++ for much faster runtimes, and helped with electron accelerator maintenance."
-    },
-    {
-      "role": "Science Instructor",
-      "org": "Technoda Medicine and Science Museum",
-      "period": "2023 – Present",
-      "text": "Design hands-on STEM experiments and mentor an FLL robotics team. Explaining engineering clearly is a skill I use every day."
-    },
-    {
-      "role": "Technical Branch Spokesperson",
-      "org": "Israeli Air Force",
-      "period": "2017 – 2020",
-      "text": "Coordinated media operations and multi-level communications where accuracy mattered."
-    }
-  ],
   "projectsTitle": "Projects",
   "projectsSubtitle": "A curated selection of hands-on work.",
   "filterLabel": "Filter projects by tag",
@@ -69,7 +43,13 @@
     "I'm still a student and I treat that as an advantage. I learn fast, ask good questions, and document what I build. This site tracks that journey: some projects are polished, others are exploratory, and all of them are hands-on."
   ],
   "currentlyLearningTitle": "Currently learning",
-  "currentlyLearning": ["Power system analysis", "Power electronics", "Renewable integration", "Energy storage", "MATLAB / Simulink"],
+  "currentlyLearning": [
+    "Power system analysis",
+    "Power electronics",
+    "Renewable integration",
+    "Energy storage",
+    "MATLAB / Simulink"
+  ],
   "contactTitle": "Connect With Me",
   "contactText": "I'm looking for student positions, internships, and projects in power systems and renewable energy. I'm also always happy to talk signals and audio.",
   "labelName": "Name",

@@ -32,13 +32,6 @@ interface FocusItem {
   text: string;
 }
 
-interface ExperienceItem {
-  role: string;
-  org: string;
-  period?: string;
-  text: string;
-}
-
 interface HomeContent {
   heroEyebrow?: string;
   heroTitle: string;
@@ -52,9 +45,6 @@ interface HomeContent {
   focusTitle: string;
   focusSubtitle: string;
   focus: FocusItem[];
-  experienceTitle: string;
-  experienceSubtitle: string;
-  experience: ExperienceItem[];
   projectsTitle: string;
   projectsSubtitle: string;
   filterLabel: string;
@@ -303,28 +293,6 @@ export default function Home() {
                 </li>
               ))}
             </ul>
-          </div>
-        </section>
-
-        <section id="experience" className="section border-t" tabIndex={-1} aria-labelledby="experience-title">
-          <div className="max-container">
-            <div className="section-header">
-              <div>
-                <h2 id="experience-title" className="section-header-title">{content.experienceTitle}</h2>
-                <p className="section-header-subtitle">{content.experienceSubtitle}</p>
-              </div>
-            </div>
-            <ol className="timeline">
-              {content.experience.map((item) => (
-                <li key={`${item.role}-${item.org}`} className="timeline-item">
-                  <h3 className="card-title">
-                    {item.role} <span className="timeline-org">· {item.org}</span>
-                  </h3>
-                  {item.period && <p className="card-meta">{item.period}</p>}
-                  <p className="card-summary">{item.text}</p>
-                </li>
-              ))}
-            </ol>
           </div>
         </section>
 
