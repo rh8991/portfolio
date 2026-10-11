@@ -7,7 +7,7 @@ export default function Privacy() {
   return (
     <>
       <Header />
-      <main>
+      <main id="main" tabIndex={-1}>
         <section className="max-container text-center" style={{ padding: '60px 0' }}>
           <h2 className="section-header-title mb-4">Privacy Policy</h2>
 
@@ -53,7 +53,7 @@ export default function Privacy() {
             If you have any questions about this Privacy Policy or the data collected, you can contact me
             at:
             <br />
-            <a href="mailto:ronelherzass@gmail.com">ronelherzass@gmail.com</a>
+            <a href="mailto:ronelhrzas98@gmail.com">ronelhrzas98@gmail.com</a>
           </p>
 
           <p className="text-gray-600" style={{ marginTop: '30px' }}>
